@@ -30,9 +30,9 @@ class Usuario extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function profesor(): HasMany
+    public function profesores(): HasMany
     {
-        return $this->hasMany(Profesor::class);
+        return $this->hasMany(profesores::class, 'usuario_id', 'id');
     }
 
 
